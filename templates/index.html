@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flask + React Demo</title>
+
+    <!-- CSS file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <!-- React + ReactDOM CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- Babel so that we can write JSX in app.jsx -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+<h1> this is a example of color flask</h1>
+  <body>
+    <!-- Yahi pe React apna UI banayega -->
+    <div id="root"></div>
+
+    <!-- React code -->
+    <script
+      type="text/babel"
+      src="{{ url_for('static', filename='app.jsx') }}"
+    ></script>
+  </body>
+</html>
